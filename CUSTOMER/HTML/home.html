@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ</title>
+    <link rel="stylesheet" href="/CUSTOMER/CSS/home.css">
+</head>
+<body>
+
+<header class="main-header">
+    <div class="logo">TEAM 12</div>
+    <nav class="nav-menu">
+        <a href="home.html" class="active">Trang chủ</a>
+        <a href="#">Lịch sử đặt phòng</a> <a href="#">Thông tin cá nhân</a> <a href="login.html" class="btn-logout">Đăng xuất</a>
+    </nav>
+</header>
+
+<section class="hero-section">
+    <div class="hero-content">
+        <h1>Tìm Phòng Khách Sạn Hoàn Hảo</h1>
+    </div>
+
+    <div class="search-box">
+        <form action="result_find_room.html" method="GET">
+            <div class="search-item">
+                <label for="checkin">Ngày nhận phòng</label>
+                <input type="date" id="checkin" required>
+            </div>
+            <div class="search-item">
+                <label for="checkout">Ngày trả phòng</label>
+                <input type="date" id="checkout" required>
+            </div>
+            <div class="search-item">
+                <label for="room-type">Loại phòng</label>
+                <select id="room-type">
+                    <option value="all">Tất cả loại phòng</option>
+                    <option value="standard">Phòng Standard (Tiêu chuẩn)</option>
+                    <option value="deluxe">Phòng Vip (Cao cấp)</option>
+                    <option value="suite">Phòng SVip (Thượng hạng)</option>
+                </select>
+            </div>
+            <button type="submit" class="btn-search">Tìm kiếm</button>
+        </form>
+    </div>
+</section>
+
+<main class="room-container">
+    <h2 class="section-title">Danh Sách Phòng Trống</h2>
+
+    <div class="room-grid">
+        <div class="room-card">
+            <div class="room-badge">Trống</div>
+            <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=600" alt="Phòng Standard">
+            <div class="room-info">
+                <h3>Phòng Standard Double</h3>
+                <p class="room-desc">Phòng tiêu chuẩn ấm cúng, phù hợp cho 2 người với đầy đủ tiện nghi cơ bản.</p>
+                <div class="room-price">1,200,000 ₫ <span>/ đêm</span></div>
+                <a href="room_detail.html" class="btn-book">Xem chi tiết & Đặt phòng</a> </div>
+        </div>
+
+        <div class="room-card">
+            <div class="room-badge">Trống</div>
+            <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=600" alt="Phòng Deluxe">
+            <div class="room-info">
+                <h3>Phòng Deluxe Ocean View</h3>
+                <p class="room-desc">Không gian rộng rãi hướng biển, nội thất sang trọng mang lại cảm giác thư thái.</p>
+                <div class="room-price">2,500,000 ₫ <span>/ đêm</span></div>
+                <a href="room_detail.html" class="btn-book">Xem chi tiết & Đặt phòng</a>
+            </div>
+        </div>
+
+        <div class="room-card">
+            <div class="room-badge">Trống</div>
+            <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=80&w=600" alt="Phòng Suite">
+            <div class="room-info">
+                <h3>Phòng Royal President Suite</h3>
+                <p class="room-desc">Phòng thượng hạng tổng thống với phòng khách riêng, quầy bar và dịch vụ quản gia 24/7.</p>
+                <div class="room-price">5,500,000 ₫ <span>/ đêm</span></div>
+                <a href="room_detail.html" class="btn-book">Xem chi tiết & Đặt phòng</a>
+            </div>
+        </div>
+    </div>
+</main>
+
+</body>
+</html>

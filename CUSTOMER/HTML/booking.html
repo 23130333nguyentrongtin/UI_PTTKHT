@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xác Nhận Đặt Phòng - Royal Hotel</title>
+    <link rel="stylesheet" href="/CUSTOMER/CSS/booking.css">
+</head>
+<body>
+
+<div id="header-component"></div>
+
+<main class="booking-container">
+    <h1 class="page-title">Xác Nhận Đặt Phòng & Thanh Toán</h1>
+
+    <div class="booking-layout">
+        <section class="booking-main">
+
+            <div class="booking-card">
+                <h2><span class="step-num">1</span> Thông tin khách lưu trú</h2>
+                <form id="form-checkout">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="customer-name">Họ và tên *</label>
+                            <input type="text" id="customer-name" value="Nguyễn Văn A" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="customer-phone">Số điện thoại *</label>
+                            <input type="tel" id="customer-phone" value="0901234567" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="customer-email">Địa chỉ Email *</label>
+                        <input type="email" id="customer-email" value="nguyenvana@gmail.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="customer-notes">Yêu cầu đặc biệt (Không bắt buộc)</label>
+                        <textarea id="customer-notes" rows="3" placeholder="Ví dụ: Phòng không hút thuốc, check-in muộn, giường phụ..."></textarea>
+                    </div>
+                </form>
+            </div>
+
+            <div class="booking-card">
+                <h2><span class="step-num">2</span> Thanh toán đặt cọc giữ phòng (Tiền cọc: 50%)</h2>
+                <p class="deposit-notice">Theo quy định của khách sạn, bạn cần đặt cọc trước 50% tổng giá trị phòng để hoàn tất quy trình đặt phòng trực tuyến.</p>
+
+                <div class="payment-methods">
+                    <label class="payment-method-item active">
+                        <input type="radio" name="payment" value="banking" checked>
+                        <div class="method-details">
+                            <strong>Chuyển khoản Ngân hàng (Quét mã QR)</strong>
+                            <p>Hệ thống tự động tạo mã QR Code điền sẵn số tiền.</p>
+                        </div>
+                    </label>
+
+                    <label class="payment-method-item">
+                        <input type="radio" name="payment" value="credit-card">
+                        <div class="method-details">
+                            <strong>Thẻ tín dụng / Thẻ ghi nợ (Visa, Mastercard)</strong>
+                            <p>Hỗ trợ tất cả các ngân hàng quốc tế và nội địa.</p>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="qr-pay-box" id="qr-area">
+                    <p>Vui lòng quét mã QR dưới đây để thực hiện đặt cọc:</p>
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=RoyalHotelBookingDeposit" alt="Mã QR Thanh Toán">
+                    <p class="timer">Nội dung chuyển khoản: <strong style="color:#bd9334;">TEAM12</strong></p>
+                </div>
+            </div>
+
+            <button type="submit" form="form-checkout" class="btn-confirm-all">XÁC NHẬN ĐẶT PHÒNG & THANH TOÁN</button>
+        </section>
+
+        <aside class="booking-summary">
+            <h3>Chi tiết phòng đặt</h3>
+            <div class="summary-room-detail">
+                <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=300" alt="Phòng đặt">
+                <div>
+                    <h4>Phòng Deluxe Ocean View</h4>
+                    <p class="hotel-name">Team 12</p>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="summary-info-list">
+                <div class="info-row">
+                    <span>Nhận phòng:</span>
+                    <strong>02/08/2026 (Từ 14:00)</strong>
+                </div>
+                <div class="info-row">
+                    <span>Trả phòng:</span>
+                    <strong>05/08/2026 (Trước 12:00)</strong>
+                </div>
+                <div class="info-row">
+                    <span>Thời gian lưu trú:</span>
+                    <strong>3 đêm</strong>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="summary-price-calculation">
+                <div class="price-row">
+                    <span>Giá phòng (3 đêm):</span>
+                    <span>7,500,000 ₫</span>
+                </div>
+                <div class="price-row">
+                    <span>Thuế & Phí dịch vụ (10%):</span>
+                    <span>750,000 ₫</span>
+                </div>
+                <div class="price-row total">
+                    <span>Tổng tiền thanh toán:</span>
+                    <span class="total-amount">8,250,000 ₫</span>
+                </div>
+                <div class="price-row deposit">
+                    <span>Số tiền cần ĐẶT CỌC (50%):</span>
+                    <span class="deposit-amount">4,125,000 ₫</span>
+                </div>
+            </div>
+        </aside>
+    </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+/* Reset định dạng mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url('https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1920') no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.auth-container {
+    background: rgba(255, 255, 255, 0.98);
+    padding: 35px 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 450px;
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.auth-header h2 {
+    color: #bd9334;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 6px;
+}
+
+.auth-header p {
+    color: #777;
+    font-size: 13.5px;
+}
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    color: #222;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14.5px;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: #bd9334;
+    box-shadow: 0 0 8px rgba(189, 147, 52, 0.25);
+}
+
+.auth-utils {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13.5px;
+    color: #555;
+    margin-bottom: 22px;
+}
+
+.auth-utils label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.auth-utils a {
+    color: #bd9334;
+    text-decoration: none;
+}
+
+.auth-utils a:hover {
+    text-decoration: underline;
+}
+
+.btn-auth {
+    width: 100%;
+    padding: 13px;
+    background-color: #bd9334;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-auth:hover {
+    background-color: #a47e2b;
+}
+
+/* Khu vực liên kết chuyển đổi trạng thái */
+.switch-auth-link {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 14px;
+    color: #444;
+}
+
+.switch-auth-link a {
+    color: #bd9334;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.switch-auth-link a:hover {
+    text-decoration: underline;
+    color: #a47e2b;
+}
