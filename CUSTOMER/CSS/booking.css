@@ -1,0 +1,263 @@
+/* ==========================================================================
+   FILE: style-booking.css (Dành riêng cho Trang Đặt Phòng & Đặt Cọc)
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f8;
+    color: #333;
+    padding-top: 80px;
+}
+
+/* Kế thừa giao diện Header chung */
+.main-header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    z-index: 1000;
+}
+.main-header .logo { color: #bd9334; font-size: 24px; font-weight: bold; letter-spacing: 2px; }
+.nav-menu { display: flex; align-items: center; gap: 25px; }
+.nav-menu a { text-decoration: none; color: #444; font-weight: 600; }
+.nav-menu a.active { color: #bd9334; }
+.nav-menu .btn-logout { background-color: #f1f1f1; padding: 8px 16px; border-radius: 6px; }
+
+/* Cấu trúc Layout */
+.booking-container {
+    max-width: 1200px;
+    margin: 30px auto 60px auto;
+    padding: 0 20px;
+}
+
+.page-title {
+    font-size: 26px;
+    margin-bottom: 25px;
+    color: #222;
+}
+
+.booking-layout {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* Cột trái */
+.booking-main {
+    flex: 2;
+}
+
+.booking-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    margin-bottom: 25px;
+}
+
+.booking-card h2 {
+    font-size: 18px;
+    color: #222;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.step-num {
+    background-color: #bd9334;
+    color: #fff;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+/* Các Ô Nhập Liệu Form */
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 6px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+    font-size: 14.5px;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: #bd9334;
+}
+
+/* Phương thức thanh toán */
+.deposit-notice {
+    font-size: 14px;
+    color: #666;
+    background-color: #fcf8e3;
+    padding: 12px;
+    border-left: 4px solid #f0ad4e;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.payment-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.payment-method-item {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 15px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.payment-method-item.active, .payment-method-item:hover {
+    border-color: #bd9334;
+    background-color: #fffcf6;
+}
+
+.method-details strong {
+    font-size: 15px;
+    color: #222;
+}
+
+.method-details p {
+    font-size: 13px;
+    color: #666;
+    margin-top: 3px;
+}
+
+/* Vùng hiển thị QR ngân hàng */
+.qr-pay-box {
+    text-align: center;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #eee;
+}
+
+.qr-pay-box img {
+    margin: 15px 0;
+    border: 4px solid #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.btn-confirm-all {
+    width: 100%;
+    background-color: #bd9334;
+    color: white;
+    border: none;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: background 0.2s;
+}
+
+.btn-confirm-all:hover { background-color: #a47e2b; }
+
+/* Cột phải: Hộp tóm tắt */
+.booking-summary {
+    flex: 1;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 110px;
+}
+
+.booking-summary h3 { font-size: 18px; margin-bottom: 15px; }
+
+.summary-room-detail {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.summary-room-detail img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.summary-room-detail h4 { font-size: 15px; color: #222; }
+.summary-room-detail .hotel-name { font-size: 12px; color: #777; }
+
+hr { border: none; border-top: 1px solid #eee; margin: 15px 0; }
+
+.info-row, .price-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.info-row span { color: #666; }
+.price-row span:last-child { font-weight: 600; }
+
+.price-row.total {
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.total-amount { color: #222; }
+
+.price-row.deposit {
+    background-color: #fff5e6;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #bd9334;
+}
+.deposit-amount { font-size: 18px; }
+
+/* Responsive */
+@media (max-width: 992px) {
+    .booking-layout { flex-direction: column; }
+    .booking-summary { position: static; width: 100%; }
+    .form-row { flex-direction: column; gap: 0; }
+}

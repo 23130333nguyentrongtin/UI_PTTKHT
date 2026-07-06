@@ -1,0 +1,265 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f8;
+    color: #333;
+    padding-top: 80px;
+}
+.main-header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    z-index: 1000;
+}
+
+.main-header .logo {
+    color: #bd9334;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 600;
+}
+
+.nav-menu .btn-logout {
+    background-color: #f1f1f1;
+    padding: 8px 16px;
+    border-radius: 6px;
+}
+
+.detail-container {
+    max-width: 1200px;
+    margin: 30px auto 60px auto;
+    padding: 0 20px;
+}
+
+.btn-back {
+    display: inline-block;
+    text-decoration: none;
+    color: #bd9334;
+    font-weight: 600;
+    margin-bottom: 20px;
+    transition: color 0.2s;
+}
+
+.btn-back:hover {
+    color: #a47e2b;
+}
+
+.detail-layout {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.room-main-info {
+    flex: 2;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.room-title {
+    font-size: 32px;
+    color: #222;
+    margin-bottom: 12px;
+}
+
+.room-meta {
+    display: flex;
+    gap: 20px;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.main-img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.room-description h3, .room-amenities h3 {
+    font-size: 20px;
+    color: #222;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.room-description h3::after, .room-amenities h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: #bd9334;
+}
+
+.room-description p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.room-amenities {
+    margin-top: 35px;
+}
+
+.amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.amenity-item {
+    background: #f8f9fa;
+    padding: 12px 15px;
+    border-radius: 6px;
+    font-size: 14.5px;
+    color: #444;
+}
+
+/* Cột Form đặt phòng (Bên phải) */
+.booking-sidebar {
+    flex: 1;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 110px;
+}
+
+.price-box {
+    margin-bottom: 25px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.price-box .price {
+    font-size: 28px;
+    font-weight: bold;
+    color: #bd9334;
+}
+
+.price-box .unit {
+    color: #777;
+    font-size: 15px;
+}
+
+.booking-form .form-group {
+    margin-bottom: 18px;
+}
+
+.booking-form label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.booking-form input, .booking-form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14.5px;
+    outline: none;
+}
+
+.booking-form input:focus, .booking-form select:focus {
+    border-color: #bd9334;
+}
+
+.total-price-summary {
+    background: #fff9eb;
+    padding: 15px;
+    border-radius: 6px;
+    margin-top: 20px;
+    border: 1px solid #f3e5c8;
+}
+
+.total-price-summary p {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.total-price-summary span {
+    color: #bd9334;
+    font-size: 20px;
+    float: right;
+}
+
+.total-price-summary .note {
+    font-size: 12px;
+    color: #888;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.btn-submit-booking {
+    width: 100%;
+    background-color: #bd9334;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.2s;
+    letter-spacing: 0.5px;
+}
+
+.btn-submit-booking:hover {
+    background-color: #a47e2b;
+}
+
+@media (max-width: 992px) {
+    .detail-layout {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .booking-sidebar {
+        position: static;
+    }
+    .main-img {
+        height: 300px;
+    }
+}

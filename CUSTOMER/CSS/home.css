@@ -1,0 +1,299 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    min-height: 100vh;
+}
+
+.main-header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    z-index: 1000;
+}
+
+.main-header .logo {
+    color: #bd9334;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 600;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover, .nav-menu a.active {
+    color: #bd9334;
+}
+
+.nav-menu .btn-logout {
+    background-color: #f1f1f1;
+    padding: 8px 16px;
+    border-radius: 6px;
+    color: #555;
+}
+
+.nav-menu .btn-logout:hover {
+    background-color: #bd9334;
+    color: #ffffff;
+}
+
+.hero-section {
+    margin-top: 65px;
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1920') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.search-box {
+    background: #ffffff;
+    padding: 24px 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    position: absolute;
+    bottom: -45px; /* Đẩy lồi xuống dưới banner */
+    width: 90%;
+    max-width: 950px;
+}
+
+.search-box form {
+    display: flex;
+    gap: 20px;
+    align-items: flex-end;
+}
+
+.search-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.search-item label {
+    font-size: 13px;
+    color: #555;
+    font-weight: 600;
+}
+
+.search-item input, .search-item select {
+    padding: 12px;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    outline: none;
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+    transition: border-color 0.3s;
+}
+
+.search-item input:focus, .search-item select:focus {
+    border-color: #bd9334;
+}
+
+.btn-search {
+    background-color: #bd9334;
+    color: #ffffff;
+    border: none;
+    padding: 13px 30px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+}
+
+.btn-search:hover {
+    background-color: #a47e2b;
+}
+
+
+.room-container {
+    max-width: 1200px;
+    margin: 120px auto 60px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    color: #222;
+    font-size: 30px;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 3px;
+    background-color: #bd9334;
+    margin-top: 10px;
+}
+
+.room-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.room-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.room-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.room-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #2ec4b6;
+    color: #ffffff;
+    padding: 6px 14px;
+    font-size: 11px;
+    font-weight: bold;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 10;
+}
+
+.room-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.room-info {
+    padding: 24px;
+}
+
+.room-info h3 {
+    font-size: 21px;
+    color: #222;
+    margin-bottom: 12px;
+}
+
+.room-desc {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    height: 68px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.room-price {
+    font-size: 24px;
+    color: #bd9334;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border-top: 1px dashed #eee;
+    padding-top: 15px;
+}
+
+.room-price span {
+    font-size: 14px;
+    color: #888;
+    font-weight: normal;
+}
+
+.btn-book {
+    display: block;
+    text-align: center;
+    background-color: #222222;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 13px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.btn-book:hover {
+    background-color: #bd9334;
+}
+
+@media (max-width: 900px) {
+    .search-box {
+        position: static;
+        width: 100%;
+        margin: 20px auto 0 auto;
+    }
+    .search-box form {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+    .hero-section {
+        height: auto;
+        padding: 60px 20px;
+    }
+    .room-container {
+        margin-top: 40px;
+    }
+    .main-header {
+        padding: 15px 20px;
+    }
+}

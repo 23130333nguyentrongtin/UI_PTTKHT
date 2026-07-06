@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Phòng - Royal Hotel</title>
+    <link rel="stylesheet" href="/CUSTOMER/CSS/room_detail.css">
+</head>
+<body>
+
+<header class="main-header">
+    <div class="logo">TEAM 12</div>
+    <nav class="nav-menu">
+        <a href="home.html">Trang chủ</a>
+        <a href="#">Lịch sử đặt phòng</a>
+        <a href="#">Thông tin cá nhân</a>
+        <a href="login.html" class="btn-logout">Đăng xuất</a>
+    </nav>
+</header>
+
+<main class="detail-container">
+    <a href="home.html" class="btn-back">← Quay lại danh sách phòng</a>
+
+    <div class="detail-layout">
+        <section class="room-main-info">
+            <h1 class="room-title">Phòng Deluxe Ocean View</h1>
+            <div class="room-meta">
+                <span><i class="icon">👤</i> Tối đa: 2 người lớn, 1 trẻ em</span>
+                <span><i class="icon">📐</i> Diện tích: 45 m²</span>
+                <span><i class="icon">🌊</i> Hướng: Biển (Ocean View)</span>
+            </div>
+
+            <div class="gallery">
+                <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=1200" alt="Phòng Deluxe" class="main-img">
+            </div>
+
+            <div class="room-description">
+                <h3>Mô tả phòng</h3>
+                <p>Phòng Deluxe Ocean View được thiết kế theo phong cách hiện đại, mang lại không gian lưu trú sang trọng và thoải mái tuyệt đối. Với cửa kính lớn chạm trần hướng thẳng ra đại dương, bạn có thể đón ánh bình minh ngay tại giường ngủ của mình.</p>
+                <p>Tất cả nội thất đều được làm từ gỗ cao cấp, kết hợp với tông màu trầm ấm tạo cảm giác thư thái, bình yên cho kỳ nghỉ của bạn và gia đình.</p>
+            </div>
+
+            <div class="room-amenities">
+                <h3>Tiện ích phòng</h3>
+                <div class="amenities-grid">
+                    <div class="amenity-item">📶 Free Wifi tốc độ cao</div>
+                    <div class="amenity-item">❄️ Điều hòa nhiệt độ</div>
+                    <div class="amenity-item">📺 Smart TV 55 inch</div>
+                    <div class="amenity-item">🛁 Bồn tắm nằm</div>
+                    <div class="amenity-item">☕ Máy pha cà phê</div>
+                    <div class="amenity-item">🔒 Két sắt an toàn</div>
+                    <div class="amenity-item">👔 Dịch vụ giặt là</div>
+                    <div class="amenity-item">🍹 Quầy bar mini</div>
+                </div>
+            </div>
+        </section>
+
+        <aside class="booking-sidebar">
+            <div class="price-box">
+                <span class="price">2,500,000 ₫</span>
+                <span class="unit">/ đêm</span>
+            </div>
+
+            <form action="booking.html" method="POST" class="booking-form">
+                <div class="form-group">
+                    <label for="date-in">Ngày nhận phòng</label>
+                    <input type="date" id="date-in" required>
+                </div>
+                <div class="form-group">
+                    <label for="date-out">Ngày trả phòng</label>
+                    <input type="date" id="date-out" required>
+                </div>
+                <div class="form-group">
+                    <label for="guests">Số lượng khách</label>
+                    <select id="guests">
+                        <option value="1">1 Người lớn</option>
+                        <option value="2" selected>2 Người lớn</option>
+                        <option value="3">2 Người lớn + 1 Trẻ em</option>
+                    </select>
+                </div>
+
+                <div class="total-price-summary">
+                    <p>Tạm tính: <span id="calc-price">2,500,000 ₫</span></p>
+                    <p class="note">*Chưa bao gồm phí dịch vụ phát sinh</p>
+                </div>
+
+                <button type="submit" class="btn-submit-booking">TIẾN HÀNH ĐẶT PHÒNG</button>
+            </form>
+        </aside>
+    </div>
+</main>
+
+</body>
+</html>
