@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Cài Đặt Chính Sách</title>
+    <link rel="stylesheet" href="../CSS/admin_dashboard.css">
+</head>
+<body>
+<aside class="sidebar">
+    <div class="sidebar-brand">ADMIN</div>
+    <ul class="sidebar-menu">
+        <li class="sidebar-item" onclick="window.location.href='admin_room.html'">Quản lý phòng</li>
+        <li class="sidebar-item" onclick="window.location.href='admin_user.html'">Quản lý người dùng</li>
+        <li class="sidebar-item active" onclick="window.location.href='admin_policy.html'">Cài đặt chính sách & Giá</li>
+        <li class="sidebar-item" onclick="window.location.href='admin_revenue.html'">Báo cáo doanh thu</li>
+        <li class="sidebar-item" onclick="window.location.href='admin_reviews.html'">Xem đánh giá khách hàng</li>
+        <li class="sidebar-item" onclick="window.location.href='admin_role.html'">Phân quyền hệ thống</li>
+        <li class="sidebar-item" onclick="window.location.href='home.html'" style="margin-top: 20px; border-top: 1px solid #334155;"> Quay lại Trang Chủ</li>
+    </ul>
+    <div class="sidebar-footer"><a href="../index.html" class="btn-logout-sidebar"> Đăng xuất</a></div>
+</aside>
+
+<main class="main-content">
+    <div class="content-header"><h1>Cài Đặt Chính Sách Cọc & Tỷ Lệ Giá</h1></div>
+    <div class="data-section">
+        <h2 style="margin-bottom: 20px; font-size: 15px; color:#1e293b;">Cấu hình tham số nghiệp vụ toàn hệ thống</h2>
+        <form onsubmit="alert('Đã lưu chính sách thành công!'); return false;">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Tỷ lệ đặt cọc bắt buộc (%)</label>
+                    <input type="number" value="50">
+                </div>
+                <div class="form-group">
+                    <label>Hệ số giá phòng ngày Lễ/Tết</label>
+                    <input type="number" step="0.1" value="1.5">
+                </div>
+                <div class="form-group">
+                    <label>Thời gian cho phép hủy phòng trước (Tiếng)</label>
+                    <input type="number" value="24">
+                </div>
+                <div class="form-group">
+                    <label>Chính sách hoàn tiền cọc</label>
+                    <select><option>Hoàn 100% tiền cọc</option><option>Hoàn 80%</option></select>
+                </div>
+            </div>
+            <button type="submit" class="btn-primary" style="margin-top: 15px;">Lưu Cấu Hình Chính Sách</button>
+        </form>
+    </div>
+</main>
+</body>
+</html>
