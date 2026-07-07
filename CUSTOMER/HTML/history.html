@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch Sử Đặt Phòng</title>
+    <link rel="stylesheet" href="../CSS/history.css">
+</head>
+<body>
+
+<div id="header-component"></div>
+<a href="#" class="btn-back">← Quay lại trang trước</a>
+<main class="history-container">
+    <h1 class="page-title">Lịch sử đặt phòng</h1>
+
+    <div class="history-list">
+
+        <div class="history-card">
+            <div class="card-header">
+                <span class="booking-id">Mã Đơn: <strong>123T</strong></span>
+                <span class="status-badge badge-warning">Đã đặt cọc 50%</span>
+            </div>
+            <div class="card-body">
+                <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=200" alt="Phòng">
+                <div class="booking-details">
+                    <h3>Phòng Deluxe Ocean View</h3>
+                    <p>📆 Thời gian: <strong>02/08/2026 ➔ 05/08/2026</strong> (3 đêm)</p>
+                    <p>👤 Khách lưu trú: Nguyễn Văn A</p>
+                </div>
+                <div class="booking-price-action">
+                    <div class="total-cost">Tổng: 8,250,000 ₫</div>
+                    <div class="deposit-cost">Đã cọc: 4,125,000 ₫</div>
+                    <button class="btn-action-cancel">Yêu cầu hủy phòng</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="history-card">
+            <div class="card-header">
+                <span class="booking-id">Mã Đơn: <strong>NTT7</strong></span>
+                <span class="status-badge badge-success">Đã hoàn thành</span>
+            </div>
+            <div class="card-body">
+                <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=200" alt="Phòng">
+                <div class="booking-details">
+                    <h3>Phòng Standard Double</h3>
+                    <p>📆 Thời gian: 15/05/2026 ➔ 17/05/2026 (2 đêm)</p>
+                    <p>👤 Khách lưu trú: Nguyễn Văn A</p>
+                </div>
+                <div class="booking-price-action">
+                    <div class="total-cost">Tổng: 2,400,000 ₫</div>
+                    <span class="paid-done">✓ Đã tất toán</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<script>
+    document.querySelector('.btn-action-cancel').addEventListener('click', function() {
+        if(confirm('Bạn có chắc chắn muốn gửi yêu cầu hủy đơn đặt phòng này không? Tiền cọc sẽ được xử lý theo quy định.')) {
+            alert('Yêu cầu hủy phòng của bạn đã được gửi tới Lễ tân xử lý!');
+        }
+    });
+</script>
+</body>
+</html>

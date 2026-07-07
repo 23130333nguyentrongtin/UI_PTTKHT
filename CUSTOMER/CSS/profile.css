@@ -1,0 +1,35 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+body { background-color: #f4f6f8; color: #333; padding-top: 80px; }
+
+.profile-container { max-width: 1200px; margin: 30px auto 60px auto; padding: 0 20px; }
+.page-title { font-size: 26px; margin-bottom: 25px; color: #222; }
+
+.profile-layout { display: flex; gap: 30px; }
+.profile-card { flex: 1; background: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+.profile-card h2 { font-size: 18px; margin-bottom: 20px; color: #222; border-bottom: 2px solid #fff3d1; padding-bottom: 8px; }
+
+.form-group { margin-bottom: 18px; }
+.form-group label { display: block; font-size: 13px; font-weight: 600; color: #555; margin-bottom: 6px; }
+.form-group input { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; outline: none; font-size: 14.5px; }
+.form-group input:focus { border-color: #bd9334; }
+
+.btn-save { width: 100%; background-color: #bd9334; color: white; border: none; padding: 13px; font-size: 14.5px; font-weight: bold; border-radius: 6px; cursor: pointer; transition: background 0.2s; margin-top: 10px; }
+.btn-save:hover { background-color: #a47e2b; }
+.btn-dark { background-color: #222; }
+.btn-dark:hover { background-color: #444; }
+
+@media (max-width: 768px) { .profile-layout { flex-direction: column; } }
+.btn-back {
+    display: inline-block;
+    text-decoration: none;
+    color: #bd9334;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-back:hover {
+    color: #222;
+    transform: translateX(-3px);
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông Tin Cá Nhân</title>
+    <link rel="stylesheet" href="../CSS/profile.css">
+</head>
+<body>
+
+<div id="header-component"></div>
+
+<main class="profile-container">
+    <a href="#" class="btn-back">← Quay lại trang trước</a>
+    <h1 class="page-title">Tài khoản của tôi</h1>
+    <div class="profile-layout">
+        <section class="profile-card">
+            <h2>Cập nhật thông tin cá nhân</h2>
+            <form id="form-profile">
+                <div class="form-group">
+                    <label for="profile-name">Họ và tên</label>
+                    <input type="text" id="profile-name" value="Nguyễn Văn A" required>
+                </div>
+                <div class="form-group">
+                    <label for="profile-phone">Số điện thoại</label>
+                    <input type="tel" id="profile-phone" value="0901234567" required>
+                </div>
+                <div class="form-group">
+                    <label for="profile-email">Địa chỉ Email</label>
+                    <input type="email" id="profile-email" value="nguyenvana@gmail.com" required>
+                </div>
+                <button type="submit" class="btn-save">LƯU THAY ĐỔI</button>
+            </form>
+        </section>
+
+        <section class="profile-card">
+            <h2>Đổi mật khẩu</h2>
+            <form id="form-password">
+                <div class="form-group">
+                    <label for="old-pass">Mật khẩu hiện tại</label>
+                    <input type="password" id="old-pass" placeholder="••••••••" required>
+                </div>
+                <div class="form-group">
+                    <label for="new-pass">Mật khẩu mới</label>
+                    <input type="password" id="new-pass" placeholder="Nhập mật khẩu mới..." required>
+                </div>
+                <div class="form-group">
+                    <label for="re-new-pass">Xác nhận mật khẩu mới</label>
+                    <input type="password" id="re-new-pass" placeholder="Nhập lại mật khẩu mới..." required>
+                </div>
+                <button type="submit" class="btn-save btn-dark">ĐỔI MẬT KHẨU</button>
+            </form>
+        </section>
+    </div>
+</main>
+</body>
+</html>
