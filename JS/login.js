@@ -8,6 +8,6 @@ loginForm.addEventListener('submit', function(event) {
 
     if(username && password) {
         alert('Đăng nhập thành công!');
-        window.location.href = 'CUSTOMER/HTML/home.html';
+        window.location.href = 'HTML/home.html';
     }
 });
