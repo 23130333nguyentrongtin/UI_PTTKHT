@@ -48,3 +48,9 @@ body { background-color: #f4f6f8; color: #333; padding-top: 80px; }
     color: #222;
     transform: translateX(-3px);
 }
+
+@media (max-width: 480px) {
+    .history-container { padding: 0 14px; }
+    .page-title { font-size: 21px; }
+    .card-header { flex-wrap: wrap; gap: 8px; }
+}

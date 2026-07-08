@@ -1,4 +1,3 @@
-/* Reset định dạng mặc định */
 * {
     margin: 0;
     padding: 0;
@@ -114,7 +113,6 @@ body {
     background-color: #a47e2b;
 }
 
-/* Khu vực liên kết chuyển đổi trạng thái */
 .switch-auth-link {
     margin-top: 25px;
     text-align: center;
@@ -131,4 +129,9 @@ body {
 .switch-auth-link a:hover {
     text-decoration: underline;
     color: #a47e2b;
+}
+
+@media (max-width: 480px) {
+    .auth-container { padding: 28px 22px; border-radius: 12px; }
+    .auth-header h2 { font-size: 23px; }
 }
