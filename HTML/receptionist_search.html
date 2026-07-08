@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lễ Tân - Tra Cứu Đơn Đặt</title>
+    <link rel="stylesheet" href="../CSS/receptionist_dashboard.css">
+</head>
+<body>
+<aside class="sidebar">
+    <div class="sidebar-brand">LỄ TÂN</div>
+    <ul class="sidebar-menu">
+        <a href="receptionist_checkin.html" class="sidebar-item">Thủ tục Check-in</a>
+        <a href="receptionist_checkout.html" class="sidebar-item"> Thủ tục Check-out</a>
+        <a href="receptionist_search.html" class="sidebar-item active"> Tra cứu & Xem đơn đặt</a>
+        <a href="receptionist_room_status.html" class="sidebar-item"> Giám sát trạng thái phòng</a>
+        <a href="receptionist_walkin.html" class="sidebar-item"> Đặt phòng tại quầy</a>
+        <a href="receptionist_guest_info.html" class="sidebar-item"> Thông tin lưu trú khách</a>
+        <a href="home.html" class="sidebar-item" style="margin-top: 20px; border-top: 1px solid #334155;"> Quay lại Trang Chủ</a>
+    </ul>
+    <div class="sidebar-footer"><a href="../index.html" class="btn-logout-sidebar"> Đăng xuất</a></div>
+</aside>
+
+<main class="main-content">
+    <div class="content-header"><h1>Tra Cứu Đơn Đặt Phòng Hệ Thống </h1></div>
+    <div class="search-bar">
+        <input type="text" class="search-input" placeholder="Nhập tên khách hàng, Số điện thoại hoặc Mã đơn hàng để tìm kiếm nhanh...">
+        <button class="btn-primary" onclick="alert('Đang lọc dữ liệu...')">Tìm Kiếm</button>
+    </div>
+    <div class="data-section">
+        <table class="data-table">
+            <thead>
+            <tr><th>Mã Đơn</th><th>Ngày Đặt</th><th>Khách Hàng</th><th>Loại Phòng</th><th>Khoảng Ngày Ở</th><th>Trạng Thái Đơn</th></tr>
+            </thead>
+            <tbody>
+            <tr><td>#BK-8832</td><td>01/07/2026</td><td>Phạm Minh Hoàng</td><td>Standard Double</td><td>12/07 - 15/07/2026</td><td><span class="badge badge-success">Đã xác nhận</span></td></tr>
+            <tr><td>#BK-8712</td><td>30/06/2026</td><td>Lê Hoàng Nam</td><td>Suite VIP</td><td>05/07 - 07/07/2026</td><td><span class="badge badge-danger">Đã hoàn tất</span></td></tr>
+            </tbody>
+        </table>
+    </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lễ Tân - Thủ Tục Check-in</title>
+    <link rel="stylesheet" href="../CSS/receptionist_dashboard.css">
+</head>
+<body>
+<aside class="sidebar">
+    <div class="sidebar-brand">LỄ TÂN</div>
+    <ul class="sidebar-menu">
+        <a href="receptionist_checkin.html" class="sidebar-item active">Thủ tục Check-in</a>
+        <a href="receptionist_checkout.html" class="sidebar-item">Thủ tục Check-out</a>
+        <a href="receptionist_search.html" class="sidebar-item">Tra cứu & Xem đơn đặt</a>
+        <a href="receptionist_room_status.html" class="sidebar-item">Giám sát trạng thái phòng</a>
+        <a href="receptionist_walkin.html" class="sidebar-item">Đặt phòng tại quầy</a>
+        <a href="receptionist_guest_info.html" class="sidebar-item"> Thông tin lưu trú khách</a>
+        <a href="home.html" class="sidebar-item" style="margin-top: 20px; border-top: 1px solid #334155;">Quay lại Trang Chủ</a>
+    </ul>
+    <div class="sidebar-footer"><a href="../index.html" class="btn-logout-sidebar"> Đăng xuất </a></div>
+</aside>
+
+<main class="main-content">
+    <div class="content-header"><h1>Xử Lý Thủ Tục Nhận Phòng</h1></div>
+    <div class="data-section">
+        <div class="section-title-bar"><h2>Khách hàng đến nhận phòng hôm nay</h2></div>
+        <table class="data-table">
+            <thead>
+            <tr><th>Mã Đơn</th><th>Khách Hàng</th><th>Phòng Chỉ Định</th><th>Tình Trạng Cọc</th><th>Xác Thực Giấy Tờ</th><th>Hành Động</th></tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>#BK-9021</td>
+                <td><strong>Nguyễn Văn A</strong><br><small>SĐT: 0901234567</small></td>
+                <td>Deluxe Ocean (P.302)</td>
+                <td><span class="badge badge-info">Đã cọc 50%</span></td>
+                <td><button class="btn-tbl-verify" onclick="alert('Đang mở camera quét CCCD/Hộ chiếu khách hàng...')">📷 Quét CCCD</button></td>
+                <td class="actions-cell"><button class="btn-tbl-checkin" onclick="alert('Hệ thống ghi nhận Khách đã Check-in và giao chìa khóa thành công!')">Xác Nhận Check-in</button></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</main>
+</body>
+</html>

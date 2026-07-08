@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lễ Tân - Thông Tin Lưu Trú</title>
+    <link rel="stylesheet" href="../CSS/receptionist_dashboard.css">
+</head>
+<body>
+<aside class="sidebar">
+    <div class="sidebar-brand">LỄ TÂN</div>
+    <ul class="sidebar-menu">
+        <a href="receptionist_checkin.html" class="sidebar-item"> Thủ tục Check-in</a>
+        <a href="receptionist_checkout.html" class="sidebar-item"> Thủ tục Check-out</a>
+        <a href="receptionist_search.html" class="sidebar-item"> Tra cứu & Xem đơn đặt</a>
+        <a href="receptionist_room_status.html" class="sidebar-item"> Giám sát trạng thái phòng</a>
+        <a href="receptionist_walkin.html" class="sidebar-item"> Đặt phòng tại quầy</a>
+        <a href="receptionist_guest_info.html" class="sidebar-item active">Thông tin lưu trú khách</a>
+        <a href="home.html" class="sidebar-item" style="margin-top: 20px; border-top: 1px solid #334155;"> Quay lại Trang Chủ</a>
+    </ul>
+    <div class="sidebar-footer"><a href="../index.html" class="btn-logout-sidebar"> Đăng xuất </a></div>
+</aside>
+
+<main class="main-content">
+    <div class="content-header"><h1>Quản Lý Thông Tin Khách Hàng Lưu Trú</h1></div>
+    <div class="data-section">
+        <div class="section-title-bar"><h2>Hồ sơ lưu trú phục vụ khai báo tạm trú công an</h2></div>
+        <table class="data-table">
+            <thead>
+            <tr><th>Số Phòng</th><th>Họ Tên Khách</th><th>Số CCCD / Passport</th><th>Quốc Tịch</th><th>Ghi Chú Đặc Biệt</th><th>Hành Động</th></tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><strong>P. 302</strong></td>
+                <td>Nguyễn Văn A</td>
+                <td>03109600xxxx</td>
+                <td>Việt Nam</td>
+                <td>Yêu cầu không hút thuốc, thêm 1 gối ôm</td>
+                <td class="actions-cell"><button class="btn-tbl-verify" style="background:#e2e8f0; color:#334155;" onclick="alert('Đang mở biểu mẫu chỉnh sửa thông tin...')">Sửa hồ sơ</button></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</main>
+</body>
+</html>
