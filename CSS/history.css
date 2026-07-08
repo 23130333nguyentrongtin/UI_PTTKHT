@@ -1,9 +1,102 @@
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
 body { background-color: #f4f6f8; color: #333; padding-top: 80px; }
-
-.history-container { max-width: 1000px; margin: 30px auto 60px auto; padding: 0 20px; }
-.page-title { font-size: 26px; margin-bottom: 25px; color: #222; }
-
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    background: #1a1a1a;
+    color: #fff;
+    display: flex;
+    justify-content: space-between; align-items: center;
+    padding: 0 40px;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.main-header .logo {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #bd9334;
+}
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.nav-menu a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14.5px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.nav-menu a:hover, .nav-menu a.his {
+    color: #bd9334;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropbtn {
+    background: none;
+    border: none;
+    color: #ccc;
+    font-size: 14.5px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 5px 0;
+}
+.dropdown:hover .dropbtn {
+    color: #bd9334;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.15);
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 1;
+}
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 13.5px;
+    text-align: left;
+}
+.dropdown-content a:hover {
+    background-color: #f5f5f5;
+    color: #bd9334;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.btn-logout {
+    background: #bd9334;
+    color: #fff !important;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+.btn-logout:hover {
+    background: #a47e2a;
+}
+.history-container {
+    max-width: 1000px;
+    margin: 30px auto 60px auto;
+    padding: 0 20px;
+}
+.page-title {
+    font-size: 26px;
+    margin-bottom: 25px;
+    color: #222;
+}
 .history-list { display: flex; flex-direction: column; gap: 20px; }
 .history-card { background: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid #eee; }
 
